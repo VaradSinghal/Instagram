@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:instagram/core/common/widgets/ig_button.dart';
+import 'package:instagram/core/theme/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -22,11 +24,49 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: 12),
                   _inputField('Password', isPassword: true),
                   SizedBox(height: 18),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: IGButton(text: 'Log in', onPressed: () {}),
+                  ),
                 ],
               ),
             ),
+            SizedBox(height: 24),
 
+            Text(
+              'Forgotten password',
+              style: GoogleFonts.outfit(
+                color: Colors.blue,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             Spacer(),
+
+            Container(
+              padding: EdgeInsets.all(16),
+              width: double.infinity,
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.blue,
+                  side: BorderSide(color: AppColors.blue),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                onPressed: () {
+                  
+                },
+                child: Text(
+                  'Create new account',
+                  style: GoogleFonts.outfit(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
