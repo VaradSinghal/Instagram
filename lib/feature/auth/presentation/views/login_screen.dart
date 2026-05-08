@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
 import 'package:instagram/core/theme/app_colors.dart';
+import 'package:instagram/feature/auth/presentation/views/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -56,7 +57,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignupScreen();
+                      },
+                    ),
+                  );
                 },
                 child: Text(
                   'Create new account',
