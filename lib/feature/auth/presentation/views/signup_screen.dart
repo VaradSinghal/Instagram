@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
 import 'package:instagram/core/common/widgets/section_title.dart';
 import 'package:instagram/core/theme/app_colors.dart';
+import 'package:instagram/feature/auth/presentation/views/name_screen.dart';
 import 'package:instagram/feature/auth/presentation/widgets/already_have_account_section.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -97,7 +98,18 @@ class _SignupScreenState extends State<SignupScreen> {
             SizedBox(
               height: 40,
               width: double.infinity,
-              child: IGButton(text: 'Next', onPressed: () {}),
+              child: IGButton(
+                text: 'Next',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NameScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
             ),
 
             SizedBox(height: 20),
