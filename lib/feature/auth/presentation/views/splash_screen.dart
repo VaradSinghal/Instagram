@@ -14,10 +14,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(milliseconds: 2500), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) =>LoginScreen()),
+    Future.delayed(const Duration(milliseconds: 2500), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => LoginScreen()),
       );
     });
   }
@@ -27,6 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +39,10 @@ class _SplashScreenState extends State<SplashScreen> {
               child: SizedBox(
                 width: 120.w,
                 height: 120.h,
-                child: Image.asset('assets/images/ig_logo.png', fit: BoxFit.contain,),
+                child: Image.asset(
+                  'assets/images/ig_logo.png',
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
 
@@ -45,13 +50,17 @@ class _SplashScreenState extends State<SplashScreen> {
               bottom: 30.h,
               left: 0,
               right: 0,
-              child:Center(
-              child: SizedBox(
-                width: 80.w,
-                height: 80.h,
-                child: Image.asset('assets/images/meta.png', fit: BoxFit.contain,),
+              child: Center(
+                child: SizedBox(
+                  width: 80.w,
+                  height: 80.h,
+                  child: Image.asset(
+                    'assets/images/meta.jpeg',
+                    fit: BoxFit.contain,
+                  ),
+                ),
               ),
-            ) )
+            ),
           ],
         ),
       ),

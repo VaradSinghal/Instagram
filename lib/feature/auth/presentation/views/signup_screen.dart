@@ -45,8 +45,8 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(height: 20),
 
             Container(
-              height: 48,
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              height: 47,
+              padding: EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
                 color: Color(0xff121212),
                 borderRadius: BorderRadius.circular(10),
@@ -70,14 +70,14 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
 
-            SizedBox(height: 6),
+            SizedBox(height: 2),
             if (!isEmail)
               Row(
                 children: [
                   Text(
                     'You may recieve WhatsApp and SMS notification from us.',
                     style: GoogleFonts.outfit(
-                      fontSize: 10,
+                      fontSize: 9,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -88,7 +88,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       "Learn more",
                       style: GoogleFonts.outfit(
                         color: AppColors.blue,
-                        fontSize: (10),
+                        fontSize: (8.5),
                       ),
                     ),
                   ),

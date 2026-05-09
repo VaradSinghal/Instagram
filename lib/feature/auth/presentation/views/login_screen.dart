@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                   _inputField('Username, email or phone number'),
                   SizedBox(height: 12),
                   _inputField('Password', isPassword: true),
-                  SizedBox(height: 18),
+                  SizedBox(height: 12),
 
                   SizedBox(
                     width: double.infinity,
