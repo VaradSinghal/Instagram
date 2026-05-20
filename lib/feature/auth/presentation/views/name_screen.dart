@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
+import 'package:instagram/feature/auth/presentation/views/password_screen.dart';
 import 'package:instagram/feature/auth/presentation/widgets/already_have_account_section.dart';
 
 class NameScreen extends StatefulWidget {
@@ -60,7 +61,19 @@ class _NameScreenState extends State<NameScreen> {
             SizedBox(
               width: double.infinity,
               height: 40,
-              child: IGButton(text: 'Next', onPressed: () {}),
+              child: IGButton(
+                text: 'Next',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return PasswordScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
             ),
             Spacer(),
 
