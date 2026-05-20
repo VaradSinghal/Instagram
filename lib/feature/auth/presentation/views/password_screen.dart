@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
 import 'package:instagram/core/common/widgets/section_title.dart';
 import 'package:instagram/core/theme/app_colors.dart';
+import 'package:instagram/feature/auth/presentation/views/birthday_screen.dart';
 
 class PasswordScreen extends StatefulWidget {
   const PasswordScreen({super.key});
@@ -119,14 +120,24 @@ class _PasswordScreenState extends State<PasswordScreen> {
               ],
             ),
 
-            const SizedBox(height: 12,),
+            const SizedBox(height: 12),
             SizedBox(
               width: double.infinity,
               height: 40,
-              child: IGButton(text: 'Next', onPressed: (){
-                
-              }),
-            )
+              child: IGButton(
+                text: 'Next',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return BirthdayScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
