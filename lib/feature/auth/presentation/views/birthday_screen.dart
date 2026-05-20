@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
 import 'package:instagram/core/common/widgets/section_title.dart';
+import 'package:instagram/feature/auth/presentation/views/username_setup_screen.dart';
 import 'package:instagram/feature/auth/presentation/widgets/already_have_account_section.dart';
 
 class BirthdayScreen extends StatefulWidget {
@@ -91,20 +92,28 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             SizedBox(
               height: 40,
               width: double.infinity,
-              child: IGButton(text: 'Next', onPressed: (){
-
-              }),
+              child: IGButton(
+                text: 'Next',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UsernameSetupScreen(),
+                    ),
+                  );
+                },
+              ),
             ),
 
             Spacer(),
 
             AlreadyHaveAccountSection(),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -131,7 +140,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
         );
       },
     );
-    if(pickedDate != null){
+    if (pickedDate != null) {
       setState(() {
         _selectedDate = pickedDate;
         _updateBirthdayText(pickedDate);
