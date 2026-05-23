@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/core/common/widgets/ig_button.dart';
+import 'package:instagram/feature/auth/presentation/views/add_profile_picture_screen.dart';
 import 'package:instagram/feature/auth/presentation/widgets/already_have_account_section.dart';
 
 class TermsScreen extends StatelessWidget {
@@ -19,6 +20,7 @@ class TermsScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
             Text(
@@ -64,7 +66,7 @@ class TermsScreen extends StatelessWidget {
               width: double.infinity,
               height: 40,
               child: IGButton(text: 'I agree', onPressed: () {
-                
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>  AddProfilePictureScreen()));
               }),
             ),
             Spacer(),
