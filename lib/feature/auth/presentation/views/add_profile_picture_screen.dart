@@ -39,6 +39,17 @@ class AddProfilePictureScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 8),
+            Center(
+              child: Container(
+                height: 120,
+                width: 120,
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(Icons.camera_alt, color: Colors.white, size: 40),
+              ),
+            ),
           ],
         ),
       ),
