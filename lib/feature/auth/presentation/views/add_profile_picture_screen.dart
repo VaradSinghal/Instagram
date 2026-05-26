@@ -39,17 +39,27 @@ class AddProfilePictureScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 8),
-            Center(
-              child: Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
-                  shape: BoxShape.circle,
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                 ),
-                child: Icon(Icons.camera_alt, color: Colors.white, size: 40),
+                child: Text(
+                  "Add a profile picture",
+                  style: GoogleFonts.outfit(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
